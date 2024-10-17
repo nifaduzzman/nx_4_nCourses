@@ -40,4 +40,4 @@ Add advanced features like course tracking, quizzes, and certificates.
 If you'd like to reach out, feel free to contact me:
 
 GitHub: https://github.com/nifaduzzman
-LinkedIn: https://linkedin.com/u/nifad2005
+LinkedIn: https://linkedin.com/in/nifad2005
