@@ -1,4 +1,5 @@
 import React from 'react'
+import { notFound } from 'next/navigation'
 import { creatorChannels, courses} from '@/data'
 import Link from 'next/link'
 
@@ -8,8 +9,12 @@ function page({params}:{params:{slug:string}}) {
   console.log(channel)
   const channelCourses:any = courses.filter((course) => course.channel === channel?.name)
 
+
   console.log("this is :",channelCourses)
 
+  if(!channel) {
+    notFound()
+  }
   return (  
     <section className='w-full min-h-[90vh] bg-slate-100 dark:bg-slate-800  '>
       <div className='w-[80%] min-h-[90vh] bg-slate-50 dark:bg-slate-900 mx-auto flex flex-col gap-8  py-8 px-4'>
