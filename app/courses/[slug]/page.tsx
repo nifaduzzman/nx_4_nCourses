@@ -1,4 +1,5 @@
 import { courses } from '@/data'
+import Link from 'next/link'
 import React from 'react'
 
 
@@ -20,7 +21,7 @@ function page({params}:{params:{slug:string}}) {
         </div>
         <div className='mt-20 text-slate-800 dark:text-slate-200'>
 
-          <h1 className='text-3xl text-slate-800 dark:text-slate-300'>Source: {course.channel}</h1>
+          <h1 className='text-3xl text-slate-800 dark:text-slate-300'>Source: <Link href={`/channels/${course.channel.replace(/\s/g, "-").toLowerCase()}`} className=' hover:underline'> {course.channel}</Link></h1>
           <h1 className='text-3xl text-slate-800 dark:text-slate-300'>Instructor: {course.instructor}</h1>
           <h2>duration: {course.duration}</h2>
           <h2>Topics: {course.category}</h2>
